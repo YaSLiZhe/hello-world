@@ -7,7 +7,13 @@ class Distribution{
     vector<Source>sources;
     public:
     void designate(int destination){
-        
+        if(destination>sources.size()-1){
+            cerr<<"Require out of bound EXIT CODE -1."<<endl;
+            return;
+        }
+        else{
+            sources[destination].rename("Assigned");
+        }
     }
 };
 
